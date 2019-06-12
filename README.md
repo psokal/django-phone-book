@@ -14,7 +14,7 @@ Książka telefoniczna pozwala na:
  ![](./phone_book_app/static/images/Screenshot1.png)
  
  
- Szczeguły :
+ Szczegóły kontaktu:
  
  ![](./phone_book_app/static/images/Screenshot1.png)
 
