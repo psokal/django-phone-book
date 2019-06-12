@@ -108,8 +108,8 @@ class SearchView(ListView):
         context['query'] = self.request.GET.get('q')
         return context
     def get_queryset(self):
-        tele = []
-        e_mail =[]
+        tele =[]
+        e_mail = []
         request = self.request
         query = request.GET.get('q', None)
         if query is not None:
@@ -119,15 +119,17 @@ class SearchView(ListView):
             email_results = models.Email.objects.filter(Q(email__icontains=query))
 
             if telefon_results:
-                for i in range(len(telefon_results)-1):
+                for i in range(len(telefon_results)):
                     tel = telefon_results[i].telefon
                     tele.append(get_object_or_404(models.Osoba, id=models.Telefon.objects.get(telefon=tel).osoba.id))
-                return tel
+                return tele
+
             if email_results:
                 for i in range(len(email_results)):
                     mail = email_results[i].email
                     e_mail.append(get_object_or_404(models.Osoba, id=models.Email.objects.get(email=mail).osoba.id))
                 return e_mail
+
             qs = imie_results or nazwisko_results or tele or e_mail
 
             return qs
