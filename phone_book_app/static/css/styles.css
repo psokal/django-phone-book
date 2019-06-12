@@ -1,0 +1,43 @@
+.boxy1{
+  height: 100px;
+  border-bottom: 7px solid black;
+  text-align: center;
+}
+
+.boxy3{
+  height: 100%;
+  border-top: 7px solid black;
+}
+
+.boxycenter{
+  border-left: 7px solid black;
+  border-right: 7px solid black;
+  text-align: center;
+  padding: 20px;
+}
+
+.colorred{
+  background-color: #E00000;
+}
+
+.coloryellow{
+  background-color: #FFFF2E;
+}
+
+.colorblue{
+  background-color: #0026D9;
+}
+
+.form-group{
+  padding-top: 40px;
+}
+
+.content{
+  font-size: 20px;
+  text-align: left;
+}
+
+.btn {
+  text-align: left;
+  margin: 15px;
+}

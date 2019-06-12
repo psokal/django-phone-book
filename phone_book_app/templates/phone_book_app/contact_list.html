@@ -1,0 +1,13 @@
+{% extends "phone_book_app/index.html" %}
+
+
+{% block body_block %}
+
+{% if people %}
+  {% for person in people %}
+    <p><a id="link" href="{{person.id}}">{{person.imie}} {{person.nazwisko}}</a></p>
+  {% endfor %}
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang=pl dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-1 boxy1 d-none d-sm-none colorred d-md-block">
+
+        </div>
+        <div class="col-lg-6 col-md-10 boxy1 boxycenter">
+          <h1>Książka telefoniczna</h1>
+        </div>
+        <div class="col-lg-3 col-md-1 d-none d-sm-none d-md-block boxy1"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-1 d-none d-sm-none d-md-block boxy2"></div>
+        <div class="col-lg-6 col-md-10 boxy2 boxycenter">
+            {% block head_block %}
+            {% endblock %}
+        </div>
+        <div class="col-lg-3 col-md-1 d-none d-sm-none d-md-block coloryellow boxy2"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-1 d-none d-sm-none d-md-block boxy3"></div>
+        <div class="col-lg-6 col-md-10 boxy3 boxycenter content">
+
+          <div class="container">
+            {% block body_block %}
+            {% endblock %}
+
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-1 d-none d-sm-none d-md-block boxy3"></div>
+      </div>
+    </div>
+  </body>
+</html>

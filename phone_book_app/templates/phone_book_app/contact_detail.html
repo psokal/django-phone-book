@@ -1,0 +1,39 @@
+{% extends "phone_book_app/base.html" %}
+
+{% block body_block %}
+<div class="container">
+<h2>{{people_detail.imie}} {{people_detail.nazwisko}}</h2>
+
+<p><u>Telefony:</u></p>
+{% if people_detail.telefony.all %}
+  {% for person in people_detail.telefony.all %}
+    <p>{{person.telefon}}</p>
+  {% endfor %}
+  {% else %}
+  <p>brak</p>
+  {% endif %}
+
+  <p><u>Emaile:</u></p>
+      {% if people_detail.maile.all %}
+    {% for person in people_detail.maile.all %}
+      <p>{{person.email}}</p>
+    {% endfor %}
+    {% else %}
+    <p>brak</p>
+    {% endif %}
+
+
+<p><a class='btn btn-success' href="{% url 'update' people_detail.id %}">Edytuj</a></p>
+<p><a class='btn btn-warning' href="{% url 'createtel' people_detail.id %}">Dodat numer telefonu</a>
+   <a class='btn btn-warning' href="{% url 'createmail' people_detail.id %}">Dodat Email</a>
+</p>
+{% if not people_detail.telefony.all %}
+{% if not people_detail.maile.all %}
+<p><a class='btn btn-danger' href="{% url 'delete' people_detail.id %}">Usuń</a></p>
+{% endif %}
+{% endif %}
+
+<p><a class='btn btn-secondary' href="{% url 'list' %}">Lista kontaktów</a></p>
+</div>
+
+{% endblock %}

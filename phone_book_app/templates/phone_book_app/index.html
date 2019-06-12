@@ -1,0 +1,29 @@
+{% extends "phone_book_app/base.html" %}
+
+
+{% block head_block %}
+<form action="search" method="GET">
+  <div class="form-row form-group">
+    <div class="col">
+      <input type="text" name="q" class="form-control" placeholder="Szukaj">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Szukaj</button>
+</form>
+{% endblock %}
+
+{% block body_block %}
+<p><a class='btn btn-warning' href="{% url 'create' %}">Dodaj kontakt</a></p>
+<div class="container">
+
+{% if people %}
+  {% for person in people %}
+    <p>
+      <a id="link" href="{% url 'detail' person.id  %}">{{person.imie}} {{person.nazwisko}}</a>
+
+    </p>
+  {% endfor %}
+
+{% endif %}
+</div>
+{% endblock %}

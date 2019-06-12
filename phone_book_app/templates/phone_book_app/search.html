@@ -1,0 +1,14 @@
+{% extends "phone_book_app/base.html" %}
+
+{% block body_block %}
+
+{% for object in object_list %}
+
+           <div class='row'>
+             <div class='col-12'>
+                <a href='{{ object.get_absolute_url}}'>{{object.imie}} {{object.nazwisko}}</a>
+            </div>
+          </div>
+
+{% endfor %}
+{% endblock %}
