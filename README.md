@@ -9,6 +9,9 @@ Książka telefoniczna pozwala na:
 * Wyszukiwanie po: osobie, telefonie oraz email
 
  ![](./phone_book_app/static/images/Screenshot1.png)
+ 
+ 
+ 
  ![](./phone_book_app/static/images/Screenshot1.png)
 
 
