@@ -8,9 +8,13 @@ Książka telefoniczna pozwala na:
 * Pod każdą osobą wyświetla jej telefony oraz emaile.
 * Wyszukiwanie po: osobie, telefonie oraz email
 
+ 
+ Lista kontaktów (imię i nazwisko):
+ 
  ![](./phone_book_app/static/images/Screenshot1.png)
  
  
+ Szczeguły :
  
  ![](./phone_book_app/static/images/Screenshot1.png)
 
